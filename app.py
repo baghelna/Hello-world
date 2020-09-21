@@ -1,11 +1,25 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 
-st.write("Hello World")
-
-z_data = pd.read_csv(‘https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv 26’)
-z = z_data.values
-
-st.write(1234)
-st.write(pd.DataFrame({'first column': [1, 2, 3, 4],'second column': [10, 20, 30, 40],}))
+def race():
+    st.title('Global Total Cases')
+    st.markdown('### Click Play ▶️ at the bottom of the graph')
+    #st.selectionbox()
+    plots = st.radio('Choose a type of plot',('Bar Plot','Line Plot'))
+    if plots == 'Bar Plot':
+        st.markdown("""<html>
+        <div class="flourish-embed" data-src="story/305795" data-url="https://flo.uri.sh/story/305795/embed">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <iframe src=\"https://flo.uri.sh/story/305795/embed" frameborder=\"0\" scrolling=\"no\" height=\"810\" width=\"2000\" style=\"width:125%;\"></iframe>
+        </div></html>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown("""<html>
+        <div class="flourish-embed" data-src="story/307671" data-url="https://flo.uri.sh/story/307671/embed">
+        <script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <iframe src=\"https://flo.uri.sh/story/307671/embed" frameborder=\"0\" scrolling=\"no\" height=\"810\" width=\"2000\" style=\"width:125%;\"></iframe>
+        </div></html>
+        """, unsafe_allow_html=True)
+    st.write('©Nikeshsingh Baghel ©Mehnaz Sheikh')
+    
+if __name__ == "__main__":
+    race()
